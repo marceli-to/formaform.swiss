@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-1f05bdb5.css",
+    "file": "assets/app-c2e3f4df.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -21,7 +21,7 @@
     "src": "resources/css/fonts/Spezia-Regular.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-3f725a52.js",
+    "file": "assets/app-3c4d3594.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
