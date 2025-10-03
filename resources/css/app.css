@@ -1,0 +1,29 @@
+@import "typo/webfonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { 
+  @apply !hidden;
+}
+
+main {
+  @apply flex-1;
+}
+
+p:not(:last-child),
+ul:not(:last-child) {
+
+}
+
+p:has(+ ul) {
+  @apply !mb-0
+}
+
+ul {
+}
+
+strong {
+  @apply font-spezia-medium font-normal;
+}

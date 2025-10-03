@@ -1,0 +1,70 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: contact
+            field:
+              buttons:
+                - bold
+                - removeformat
+                - anchor
+                - h4
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              link_collections:
+                - pages
+              container: assets
+              type: bard
+              display: Kontakt
+              localizable: false
+          -
+            handle: catering
+            field:
+              buttons:
+                - bold
+                - removeformat
+                - anchor
+                - h4
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              link_collections:
+                - pages
+              container: assets
+              type: bard
+              display: 'Arosa Stübli'
+              localizable: false
+          -
+            handle: operations
+            field:
+              buttons:
+                - bold
+                - removeformat
+                - anchor
+                - h4
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              link_collections:
+                - pages
+              container: assets
+              type: bard
+              display: Betrieb
+              localizable: false
+          -
+            handle: links
+            field:
+              buttons:
+                - bold
+                - removeformat
+                - anchor
+                - h4
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              link_collections:
+                - pages
+              container: assets
+              type: bard
+              display: Links
+              localizable: false
