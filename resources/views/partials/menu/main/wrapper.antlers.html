@@ -3,7 +3,7 @@
     bg-white
     fixed
     top-[var(--header-height-sm)]
-    lg:top-[var(--header-height-lg)]
+    lg:top-[calc(var(--header-height-lg)_+_12px)]
     left-0
     xl:left-[calc(((100vw_-_77.25rem)_/_2)_-_6px)]
     z-20
@@ -14,7 +14,7 @@
     w-full
     lg:max-w-[336px]
     min-h-[calc(100dvh_-_var(--header-height-sm))]
-    lg:min-h-[calc(100dvh_-_var(--header-height-lg))]"
+    lg:min-h-[calc(100dvh_-_var(--header-height-lg)_-_12px)]"
   x-cloak
   x-show="menu"
   x-transition:enter="transition ease-out duration-100"

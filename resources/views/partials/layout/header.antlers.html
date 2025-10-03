@@ -1,23 +1,24 @@
-<header class="sticky top-0 left-0 z-10 w-full bg-white h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)]">
-  {{ partial:layout/container/inner class="h-[inherit] flex items-center justify-between" }}
-    <a
-      href="/"
-      aria-label="Startseite"
-      class="w-210 lg:w-[320px] h-auto lg:order-2">
-      {{ partial:icons/logo class="w-full h-auto" }}
-    </a>
-    {{ partial:menu/main/button class="lg:order-1" }}
+<header class="sticky top-0 left-0 z-10 w-full lg:pt-12 h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)]">
+  <div class="bg-white h-[inherit]">
+    {{ partial:layout/container/inner class="h-[inherit] flex items-center justify-between" }}
+      <a
+        href="/"
+        aria-label="Startseite"
+        class="w-210 lg:w-[320px] h-auto lg:order-2">
+        {{ partial:icons/logo class="w-full h-auto" }}
+      </a>
+      {{ partial:menu/main/button class="lg:order-1" }}
 
-    <a 
-      href="javascript:;" 
-      x-on:click="auth = !auth" 
-      class="hidden lg:block lg:order-3 w-14 h-auto">
-      {{ partial:icons/login class="w-full h-auto" }}
-    </a>
+      <a 
+        href="javascript:;" 
+        x-on:click="auth = !auth" 
+        class="hidden lg:block lg:order-3 w-14 h-auto">
+        {{ partial:icons/login class="w-full h-auto" }}
+      </a>
 
-    {{ partial:components/auth/login }}
-  
-  {{ /partial:layout/container/inner }}
+      {{ partial:components/auth/login }}
+    
+    {{ /partial:layout/container/inner }}
 </header>
 
 {{ partial:menu/main/wrapper }}
