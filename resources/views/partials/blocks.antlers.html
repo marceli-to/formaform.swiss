@@ -11,5 +11,10 @@
   {{ partial:components/teaser/wrapper }}
 {{ /if }}
 
+<div>Normal content</div>
+{{ if logged_in }}
+<div>Protected content</div>
+{{ /if }}
+
 
   

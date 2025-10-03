@@ -3,18 +3,18 @@
     bg-white
     fixed
     top-[var(--header-height-sm)]
-    md:top-[var(--header-height-md)]
+    lg:top-[var(--header-height-lg)]
     left-0
     xl:left-[calc(((100vw_-_77.25rem)_/_2)_-_6px)]
     z-20
     px-20
-    md:px-22
+    lg:px-22
     pt-16
-    md:pt-0
+    lg:pt-0
     w-full
-    md:max-w-[336px]
+    lg:max-w-[336px]
     min-h-[calc(100dvh_-_var(--header-height-sm))]
-    md:min-h-[calc(100dvh_-_var(--header-height-md))]"
+    lg:min-h-[calc(100dvh_-_var(--header-height-lg))]"
   x-cloak
   x-show="menu"
   x-transition:enter="transition ease-out duration-100"
@@ -23,7 +23,7 @@
   x-transition:leave="transition ease-in duration-0"
   x-transition:leave-start="opacity-100"
   x-transition:leave-end="opacity-0">
-  <nav class="relative md:-top-2">
+  <nav class="relative lg:-top-2">
     <ul class="flex flex-col gap-y-20 lg:gap-y-18">
       {{ nav:main }}
         {{ partial:menu/main/item }}
