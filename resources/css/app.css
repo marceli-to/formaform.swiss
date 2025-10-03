@@ -8,6 +8,11 @@
   @apply !hidden;
 }
 
+:root {
+  --header-height-sm: 2.875rem; /* 46 px */
+  --header-height-lg: 5.5rem;   /* 88 px */
+}
+
 main {
   @apply flex-1;
 }

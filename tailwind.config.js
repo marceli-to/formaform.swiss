@@ -23,7 +23,7 @@ export default {
       },
 
       maxWidth: {
-        'inner-container': '60rem', // 960px
+        'inner-container': '77.25rem', // 1236px
       },
       
       colors: {

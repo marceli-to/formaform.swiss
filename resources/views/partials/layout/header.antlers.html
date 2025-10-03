@@ -1,3 +1,10 @@
-<header class="relative w-full">
-
+<header class="sticky top-0 left-0 z-10 w-full bg-white h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)]">
+  {{ partial:layout/container/inner class="h-[inherit] bg-blue-200 flex items-center" }}
+    <a
+      href="/"
+      aria-label="Startseite">
+      {{ partial:icons/logo}}
+    </a>
+  
+  {{ /partial:layout/container/inner }}
 </header>
