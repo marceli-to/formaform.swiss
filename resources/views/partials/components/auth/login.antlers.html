@@ -1,0 +1,56 @@
+<div
+  class="
+    bg-olverra
+    fixed
+    _top-[var(--header-height-sm)]
+    _lg:top-[var(--header-height-lg)]
+    top-16
+    right-0
+    xl:right-[calc(((100vw_-_77.25rem)_/_2)_-_6px)]
+    z-20
+    px-20
+    lg:px-22
+    pt-80
+    w-full
+    lg:max-w-[336px]
+    min-h-[calc(100dvh_-_16px)]"
+    x-cloak
+    x-show="auth"
+    x-transition:enter="transition ease-out duration-100"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-0"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0">
+  {{ if logged_in }}
+    <div>
+      <p>Schon eingeloggt als {{ current_user:name ?? current_user.email }}.</p>
+
+      <a href="{{ user:logout_url }}" redirect="{{ url }}" class="bg-dravine text-olverra block w-full text-left p-4">
+        Log out
+      </a>
+    </div>
+  {{ else }}
+    {{ user:login_form redirect="{{ url }}" error_redirect="/login" }}
+      {{ if errors }}
+        <ul class="mb-4 text-red-600 text-sm">
+          {{ errors }}
+            <li>{{ value }}</li>
+          {{ /errors }}
+        </ul>
+      {{ /if }}
+
+      <div class="space-y-4 max-w-sm">
+        <div>
+          <input type="email" name="email" value="{{ old:email }}" class="w-full p-4" placeholder="E-Mail"/>
+        </div>
+        <div>
+          <input type="password" name="password" class="w-full p-4" placeholder="Passwort"/>
+        </div>
+
+        <button type="submit" class="bg-dravine text-olverra block w-full text-left p-4">Einloggen</button>
+
+      </div>
+    {{ /user:login_form }}
+  {{ /if }}
+</div>

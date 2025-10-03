@@ -28,6 +28,7 @@ export default {
       
       colors: {
         'olverra': '#788773',
+        'dravine': '#465441',
       },
 
       fontFamily: {

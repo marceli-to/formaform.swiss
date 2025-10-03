@@ -8,9 +8,14 @@
     </a>
     {{ partial:menu/main/button class="lg:order-1" }}
 
-    <a href="" class="hidden lg:block lg:order-3 w-14 h-auto">
+    <a 
+      href="javascript:;" 
+      x-on:click="auth = !auth" 
+      class="hidden lg:block lg:order-3 w-14 h-auto">
       {{ partial:icons/login class="w-full h-auto" }}
     </a>
+
+    {{ partial:components/auth/login }}
   
   {{ /partial:layout/container/inner }}
 </header>
