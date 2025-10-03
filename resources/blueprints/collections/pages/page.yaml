@@ -26,9 +26,20 @@ tabs:
                   display: Hauptelemente
                   icon: addon-boxes-stack
                   sets:
-                    neues_set:
-                      display: 'Neues Set'
-                      fields: {  }
+                    visual:
+                      display: Visual
+                      instructions: 'Visual hinzufügen'
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: visual
+                    teaser_homepage:
+                      display: 'Teaser Startseite'
+                      instructions: 'Teaser für Startseite hinzufügen'
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: teaser_homepage
   seo:
     display: SEO
     sections:

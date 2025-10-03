@@ -1,6 +1,21 @@
-<div 
-  class=""
-  x-cloak 
+<div
+  class="
+    bg-white
+    fixed
+    top-[var(--header-height-sm)]
+    md:top-[var(--header-height-md)]
+    left-0
+    xl:left-[calc(((100vw_-_77.25rem)_/_2)_-_6px)]
+    z-20
+    px-20
+    md:px-22
+    pt-16
+    md:pt-0
+    w-full
+    md:max-w-[336px]
+    min-h-[calc(100dvh_-_var(--header-height-sm))]
+    md:min-h-[calc(100dvh_-_var(--header-height-md))]"
+  x-cloak
   x-show="menu"
   x-transition:enter="transition ease-out duration-100"
   x-transition:enter-start="opacity-0"
@@ -8,8 +23,8 @@
   x-transition:leave="transition ease-in duration-0"
   x-transition:leave-start="opacity-100"
   x-transition:leave-end="opacity-0">
-  <nav>
-    <ul>
+  <nav class="relative md:-top-2">
+    <ul class="flex flex-col gap-y-20 lg:gap-y-18">
       {{ nav:main }}
         {{ partial:menu/main/item }}
       {{ /nav:main }}

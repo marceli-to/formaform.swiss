@@ -19,7 +19,7 @@ export default {
     extend: {
 
       screens: {
-        'xs': '480px',
+        'xl': '1248px', // 1236px
       },
 
       maxWidth: {
@@ -36,10 +36,8 @@ export default {
       },
 
       fontSize: {
-        sm: '1rem',     // 16px
-        md: '1.125rem', // 18px
-        lg: '1.563rem', // 25px
-        xl: '2.875rem'  // 46px
+        sm: '1.125rem', // 18px
+        md: '1.375rem', // 22px
       },
       
       zIndex: {

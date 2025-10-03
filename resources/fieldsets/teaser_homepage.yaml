@@ -1,0 +1,66 @@
+title: 'Teaser Startseite'
+fields:
+  -
+    handle: teaser
+    field:
+      collapse: true
+      type: replicator
+      display: Teaser
+      localizable: false
+      sets:
+        teaser:
+          display: Teaser
+          instructions: 'Teaser hinzufügen'
+          icon: text-formatting-image-top
+          sets:
+            teaser_page:
+              display: Seitenteaser
+              instructions: 'Seitenteaser hinzufügen'
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                    localizable: false
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Bild
+                    localizable: false
+                -
+                  handle: link
+                  field:
+                    collections:
+                      - pages
+                    type: link
+                    display: Link
+                    localizable: false
+            news:
+              display: Aktuell
+              instructions: 'Teaser Aktuell hinzufügen'
+              icon: text-formatting-markdown
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                    localizable: false
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - unorderedlist
+                      - removeformat
+                      - anchor
+                    toolbar_mode: floating
+                    remove_empty_nodes: true
+                    type: bard
+                    display: Text
+                    localizable: false

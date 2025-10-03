@@ -1,0 +1,12 @@
+<section class="flex flex-col md:grid md:grid-cols-12 gap-x-20 gap-y-34">
+  {{ teaser }}
+    {{ if type == 'news' }}
+      {{ partial:components/teaser/news }}
+    {{ /if }}
+    
+    {{ if type == 'teaser_page' }}
+      {{ partial:components/teaser/page }}
+    {{ /if }}
+
+  {{ /teaser }}
+</section>

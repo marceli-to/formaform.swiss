@@ -1,0 +1,20 @@
+title: Visual
+fields:
+  -
+    handle: image_mobile
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Bild (Mobile)'
+      instructions: 'Optimales Format is 3:4'
+      localizable: false
+  -
+    handle: image_desktop
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Bild (Desktop)'
+      instructions: 'Optimales Format is 16:9'
+      localizable: false

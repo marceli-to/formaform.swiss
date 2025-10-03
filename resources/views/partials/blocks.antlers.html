@@ -2,3 +2,14 @@
 {{ if type == 'editor' }}
   {{ partial:components/editor }}
 {{ /if }}
+
+{{ if type == 'visual' }}
+  {{ partial:components/media/visual }}
+{{ /if }}
+
+{{ if type == 'teaser_homepage' }}
+  {{ partial:components/teaser/wrapper }}
+{{ /if }}
+
+
+  

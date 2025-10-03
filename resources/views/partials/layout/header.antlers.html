@@ -1,10 +1,19 @@
-<header class="sticky top-0 left-0 z-10 w-full bg-white h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)]">
-  {{ partial:layout/container/inner class="h-[inherit] bg-blue-200 flex items-center" }}
+<header class="sticky top-0 left-0 z-10 w-full bg-white h-[var(--header-height-sm)] md:h-[var(--header-height-md)]">
+  {{ partial:layout/container/inner class="h-[inherit] flex items-center justify-between" }}
     <a
       href="/"
-      aria-label="Startseite">
-      {{ partial:icons/logo}}
+      aria-label="Startseite"
+      class="w-210 md:w-[320px] h-auto md:order-2">
+      {{ partial:icons/logo class="w-full h-auto" }}
+    </a>
+    {{ partial:menu/main/button class="md:order-1" }}
+
+    <a href="" class="hidden md:block md:order-3 w-14 h-auto">
+      {{ partial:icons/login class="w-full h-auto" }}
     </a>
   
   {{ /partial:layout/container/inner }}
 </header>
+
+{{ partial:menu/main/wrapper }}
+
