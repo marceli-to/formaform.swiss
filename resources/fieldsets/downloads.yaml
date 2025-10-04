@@ -1,0 +1,51 @@
+title: Downloads
+fields:
+  -
+    handle: download_category
+    field:
+      type: replicator
+      display: 'Kategorie'
+      localizable: false
+      collapse: true
+      sets:
+        download_category:
+          display: 'Kategorie'
+          instructions: 'Kategorie hinzufügen'
+          icon: download-arrow-down
+          sets:
+            download_category:
+              display: 'Kategorie'
+              instructions: 'Kategorie hinzufügen'
+              icon: download-arrow-down
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                    localizable: false
+                    validate:
+                      - required
+                -
+                  handle: files
+                  field:
+                    type: grid
+                    display: Dateien
+                    localizable: false
+                    fields:
+                      -
+                        handle: file
+                        field:
+                          max_files: 1
+                          container: assets
+                          type: assets
+                          display: Datei
+                          localizable: false
+                          width: 50
+                      -
+                        handle: file_name
+                        field:
+                          type: text
+                          display: Name
+                          localizable: false
+                          width: 50

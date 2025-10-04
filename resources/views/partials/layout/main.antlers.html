@@ -1,4 +1,4 @@
-<main role="main" class="w-full relative lg:pt-12">
+<main role="main" class="w-full relative {{ !is_homepage ? 'pt-46 lg:pt-60' : '' }}">
   {{ partial:layout/container/inner }}
     {{ template_content }}
   {{ /partial:layout/container/inner }}

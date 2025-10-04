@@ -1,25 +1,31 @@
-<header class="sticky top-0 left-0 z-10 w-full lg:pt-12 h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)]">
-  <div class="bg-white h-[inherit]">
-    {{ partial:layout/container/inner class="h-[inherit] flex items-center justify-between" }}
-      <a
-        href="/"
-        aria-label="Startseite"
-        class="w-210 lg:w-[320px] h-auto lg:order-2">
-        {{ partial:icons/logo class="w-full h-auto" }}
-      </a>
-      {{ partial:menu/main/button class="lg:order-1" }}
+<header class="sticky top-0 left-0 z-10 w-full lg:pt-12">
+  <div class="bg-white h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)]">
+    {{ partial:layout/container/inner class="h-[inherit] flex flex-row-reverse lg:flex-row items-center justify-between" }}
 
-      <a 
-        href="javascript:;" 
-        x-on:click="auth = !auth" 
-        class="hidden lg:block lg:order-3 w-14 h-auto">
-        {{ partial:icons/login class="w-full h-auto" }}
-      </a>
+      <div class="lg:w-60 flex justify-end lg:justify-start">
+        {{ partial:menu/button }}
+      </div>
 
+      <div>
+        <a
+          href="/"
+          aria-label="Startseite"
+          class="block w-210 lg:w-[320px] h-auto">
+          {{ partial:icons/logo class="w-full h-auto" }}
+        </a>
+      </div>
+
+      <div class="hidden lg:flex lg:w-60 justify-end">
+        <a
+          href="javascript:;"
+          x-on:click="auth = !auth"
+          class="block w-14 h-auto">
+          {{ partial:icons/login class="w-full h-auto" }}
+        </a>
+      </div>
+      
     {{ /partial:layout/container/inner }}
+  </div>
 </header>
-
-{{ partial:menu/main/wrapper }}
-{{ partial:components/auth/login }}
-
-
+{{ partial:menu/wrapper }}
+{{ partial:auth/wrapper }}

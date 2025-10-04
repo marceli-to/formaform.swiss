@@ -11,7 +11,8 @@
 :root {
   --header-height-sm: 2.875rem;   /* 46 px */
   --header-height-lg: 5.5rem;     /* 88 px */
-  --max-container: 77.25rem;      /* 1236 px */
+  --max-width-container: 77.25rem;      /* 1236 px */
+  --max-width-content: 57.625rem;       /* 922 px */ 
 }
 
 main {

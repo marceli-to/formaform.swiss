@@ -5,7 +5,7 @@
     top-0
     lg:top-12
     right-0
-    xl:right-[calc(((100vw_-_var(--max-container))_/_2)_+_22px)]
+    xl:right-[calc(((100vw_-_var(--max-width-container))_/_2)_+_22px)]
     z-30
     px-20
     lg:px-22
@@ -15,6 +15,7 @@
     min-h-[calc(100dvh_-_16px)]"
     x-cloak
     x-show="auth || {{ errors:count > 0 ? 'true' : 'false' }}"
+    @click.outside="auth = false"
     x-transition:enter="transition ease-out duration-100"
     x-transition:enter-start="opacity-0"
     x-transition:enter-end="opacity-100"

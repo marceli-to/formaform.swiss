@@ -40,6 +40,13 @@ tabs:
                       fields:
                         -
                           import: teasers
+                    downloads:
+                      display: Downloads
+                      instructions: 'Downloads hinzufügen'
+                      icon: download-arrow-down
+                      fields:
+                        -
+                          import: downloads
   seo:
     display: SEO
     sections:
