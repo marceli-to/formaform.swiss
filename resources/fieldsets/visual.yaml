@@ -9,6 +9,7 @@ fields:
       display: 'Bild (Mobile)'
       instructions: 'Optimales Format is 3:4'
       localizable: false
+      width: 50
   -
     handle: image_desktop
     field:
@@ -18,3 +19,4 @@ fields:
       display: 'Bild (Desktop)'
       instructions: 'Optimales Format is 16:9'
       localizable: false
+      width: 50

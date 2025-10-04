@@ -21,10 +21,6 @@ export default {
       screens: {
         'xl': '1248px', // 1236px
       },
-
-      maxWidth: {
-        'inner-container': '77.25rem', // 1236px
-      },
       
       colors: {
         'olverra': '#788773',

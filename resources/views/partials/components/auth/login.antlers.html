@@ -2,12 +2,11 @@
   class="
     bg-olverra
     fixed
-    _top-[var(--header-height-sm)]
-    _lg:top-[var(--header-height-lg)]
-    top-16
+    top-0
+    lg:top-12
     right-0
-    xl:right-[calc(((100vw_-_77.25rem)_/_2)_-_6px)]
-    z-20
+    xl:right-[calc(((100vw_-_var(--max-container))_/_2)_+_22px)]
+    z-30
     px-20
     lg:px-22
     pt-80
@@ -15,7 +14,7 @@
     lg:max-w-[336px]
     min-h-[calc(100dvh_-_16px)]"
     x-cloak
-    x-show="auth"
+    x-show="auth || {{ errors:count > 0 ? 'true' : 'false' }}"
     x-transition:enter="transition ease-out duration-100"
     x-transition:enter-start="opacity-0"
     x-transition:enter-end="opacity-100"
@@ -31,7 +30,7 @@
       </a>
     </div>
   {{ else }}
-    {{ user:login_form redirect="{{ url }}" error_redirect="/login" }}
+    {{ user:login_form redirect="{{ url }}" error_redirect="{{ url }}" }}
       {{ if errors }}
         <ul class="mb-4 text-red-600 text-sm">
           {{ errors }}

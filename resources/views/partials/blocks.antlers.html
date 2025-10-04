@@ -7,13 +7,8 @@
   {{ partial:components/media/visual }}
 {{ /if }}
 
-{{ if type == 'teaser_homepage' }}
+{{ if type == 'teasers' }}
   {{ partial:components/teaser/wrapper }}
-{{ /if }}
-
-<div>Normal content</div>
-{{ if logged_in }}
-<div>Protected content</div>
 {{ /if }}
 
 
