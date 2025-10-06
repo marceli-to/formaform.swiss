@@ -61,11 +61,10 @@
           </span>
         </div>
         <div>
-          <a 
-            href="{{ user:logout_url }}" 
-            redirect="{{ url }}" 
+          <a
+            href="{{ user:logout_url redirect='{url}' }}"
             class="bg-dravine flex items-center gap-x-8 font-spezia-medium font-medium text-xs leading-none text-olverra w-full text-left px-12 py-11 hover:bg-white transition-colors">
-            {{ partial:icons/arrow class="w-16 h-auto" }} 
+            {{ partial:icons/arrow class="w-16 h-auto" }}
             Abmelden
           </a>
         </div>

@@ -1,0 +1,21 @@
+{{ prev_product :id="id" }}
+  {{ if url }}
+    <a 
+      href="{{ url }}" 
+      class="absolute top-[30vh] left-0 lg:left-46 w-14 h-24" 
+      aria-label="Vorheriges Produkt {{ title }}">
+      {{ partial:icons/prev class="w-full h-auto" }}
+    </a>
+  {{ /if }}
+{{ /prev_product }}
+
+{{ next_product :id="id" }}
+  {{ if url }}
+    <a 
+      href="{{ url }}" 
+      class="absolute top-[30vh] right-0 lg:right-46 w-14 h-24"
+      aria-label="Nächstes Produkt {{ title }}">
+      {{ partial:icons/next class="w-full h-auto" }}
+    </a>
+  {{ /if }}
+{{ /next_product }}

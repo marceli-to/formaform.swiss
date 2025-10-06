@@ -34,3 +34,27 @@ ul {
 strong {
   @apply font-spezia-medium font-normal;
 }
+
+.product p:not(:last-child) {
+  @apply mb-15
+}
+
+.product p:has(+ ul) {
+  @apply !mb-0
+}
+
+.product ul {
+  @apply list-none
+}
+
+.product ul li {
+  @apply pl-30 relative
+}
+
+.product ul li::before {
+  @apply content-['—'] absolute left-0 top-0
+}
+
+.product ul li p {
+  @apply inline;
+}

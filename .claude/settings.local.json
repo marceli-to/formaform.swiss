@@ -8,7 +8,9 @@
       "Bash(npm run build:*)",
       "mcp__laravel-boost__application-info",
       "Bash(php:*)",
-      "Bash(composer update:*)"
+      "Bash(composer update:*)",
+      "mcp__laravel-boost__search-docs",
+      "Bash(vendor/bin/pint:*)"
     ],
     "deny": []
   },

@@ -61,6 +61,11 @@ tabs:
                       fields:
                         -
                           import: team_member
+                    product_listing:
+                      display: Produkteübersicht
+                      instructions: 'Produkteübersicht hinzufügen'
+                      icon: layout-grid-dots
+                      fields: {  }
   seo:
     display: SEO
     sections:
