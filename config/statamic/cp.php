@@ -47,6 +47,11 @@ return [
         //   'sort' => 'order',
         // ],
         [ 
+          'type' => 'local_weather',
+          'width' => 100,
+          'title' => 'Wetter',
+        ],
+        [ 
           'type' => 'collection',
           'collection' => 'pages',
           'limit' => 15,

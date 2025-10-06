@@ -1,19 +1,30 @@
+<div 
+  x-cloak
+  x-show="auth || {{ errors:count > 0 ? 'true' : 'false' }}"
+  @click="auth = false"
+  class="fixed left-0 top-0 z-10 bg-white/50 w-full h-full">
+</div>
 <div
   class="
     bg-olverra
+    text-white
+    font-spezia-medium 
+    font-medium
+    text-xs
     fixed
     top-0
     lg:top-12
     right-0
-    xl:right-[calc(((100vw_-_var(--max-width-container))_/_2)_+_22px)]
+    xl:right-[calc(((100%_-_var(--max-width-container))_/_2))]
     z-30
     px-20
     lg:px-22
-    pt-80
     w-full
     lg:max-w-[336px]
-    min-h-[calc(100dvh_-_16px)]"
+    min-h-dvh
+    lg:min-h-[calc(100dvh_-_12px)]"
     x-cloak
+    x-data="{ hasFocus: false }"
     x-show="auth || {{ errors:count > 0 ? 'true' : 'false' }}"
     @click.outside="auth = false"
     x-transition:enter="transition ease-out duration-100"
@@ -22,34 +33,64 @@
     x-transition:leave="transition ease-in duration-0"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0">
+
+    <div class="flex justify-between items-center h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)]">
+      <span class="text-sm">
+        Login
+      </span>
+      <span>
+        <a
+          href="javascript:;"
+          x-on:click="auth = !auth"
+          class="block w-14 h-auto">
+          {{ partial:icons/login class="w-full h-auto text-white" }}
+        </a>
+      </span>
+    </div>
+
   {{ if logged_in }}
+  
     <div>
       <p>Schon eingeloggt als {{ current_user:name ?? current_user.email }}.</p>
-
       <a href="{{ user:logout_url }}" redirect="{{ url }}" class="bg-dravine text-olverra block w-full text-left p-4">
         Log out
       </a>
     </div>
+
   {{ else }}
+
     {{ user:login_form redirect="{{ url }}" error_redirect="{{ url }}" }}
-      {{ if errors }}
-        <ul class="mb-4 text-red-600 text-sm">
-          {{ errors }}
-            <li>{{ value }}</li>
-          {{ /errors }}
-        </ul>
-      {{ /if }}
 
-      <div class="space-y-4 max-w-sm">
+      <div class="flex flex-col gap-y-14">
         <div>
-          <input type="email" name="email" value="{{ old:email }}" class="w-full p-4" placeholder="E-Mail"/>
+          <input 
+            type="email" 
+            name="email" 
+            value="{{ old:email }}" 
+            class="w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-olverra placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0" 
+            placeholder="E-Mail-Adresse"
+            x-on:focus="hasFocus = true" />
         </div>
         <div>
-          <input type="password" name="password" class="w-full p-4" placeholder="Passwort"/>
+          <input 
+            type="password" 
+            name="password" 
+            class="w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-olverra placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0" 
+            placeholder="Passwort"
+            x-on:focus="hasFocus = true" />
         </div>
-
-        <button type="submit" class="bg-dravine text-olverra block w-full text-left p-4">Einloggen</button>
-
+        <button 
+          type="submit" 
+          class="bg-dravine font-spezia-medium font-medium text-xs leading-none text-olverra block w-full text-left px-12 py-11">
+          Einloggen
+        </button>
+        {{ if errors }}
+          <ul class="!mb-0 text-red-600" x-show="!hasFocus">
+            {{ errors }}
+              <li>{{ value }}</li>
+            {{ /errors }}
+          </ul>
+        {{ /if }}
       </div>
     {{ /user:login_form }}
   {{ /if }}
