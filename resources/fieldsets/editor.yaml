@@ -4,10 +4,8 @@ fields:
     handle: editor
     field:
       buttons:
-        - h1
         - h2
         - h3
-        - h4
         - bold
         - italic
         - unorderedlist
@@ -15,7 +13,6 @@ fields:
         - superscript
         - anchor
         - nobr
-        - lead
       toolbar_mode: floating
       remove_empty_nodes: true
       type: bard
@@ -28,65 +25,6 @@ fields:
           display: Elemente
           icon: addon-boxes-stack
           sets:
-            link:
-              display: 'Button / Link'
-              instructions: 'Button / Link hinzufügen'
-              icon: link
-              fields:
-                -
-                  handle: link
-                  field:
-                    collections:
-                      - pages
-                    container: assets
-                    type: link
-                    display: Link
-                    localizable: false
-                -
-                  handle: link_text
-                  field:
-                    type: text
-                    display: Linktext
-                    localizable: false
-                    width: 50
-                -
-                  handle: target
-                  field:
-                    options:
-                      -
-                        key: _blank
-                        value: 'Neues Fenster'
-                      -
-                        key: _self
-                        value: 'Gleiches Fenster'
-                    type: select
-                    display: 'Öffnen in'
-                    localizable: false
-                    default: _blank
-                    width: 50
-            information:
-              display: Informationen
-              instructions: 'Informationen hinzufügen'
-              icon: file-content-list
-              fields:
-                -
-                  handle: information
-                  field:
-                    type: grid
-                    display: Informationen
-                    localizable: false
-                    fields:
-                      -
-                        handle: label
-                        field:
-                          type: text
-                          display: Label
-                          localizable: false
-                          width: 50
-                      -
-                        handle: value
-                        field:
-                          type: text
-                          display: Wert
-                          localizable: false
-                          width: 50
+            neues_set:
+              display: 'Neues Set'
+              fields: {  }

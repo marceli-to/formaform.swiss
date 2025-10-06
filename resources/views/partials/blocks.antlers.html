@@ -15,5 +15,14 @@
   {{ partial:components/media/downloads/wrapper }}
 {{ /if }}
 
+{{ if type == 'image_text' }}
+  {{ partial:components/image_text }}
+{{ /if }}
+
+{{ if type == 'team_member' }}
+  {{ partial:components/team_member }}
+{{ /if }}
+
+
 
   

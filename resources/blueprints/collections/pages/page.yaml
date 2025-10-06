@@ -47,6 +47,20 @@ tabs:
                       fields:
                         -
                           import: downloads
+                    image_text:
+                      display: 'Bild / Text'
+                      instructions: 'Bild / Text Element hinzufügen'
+                      icon: text-formatting-image-left
+                      fields:
+                        -
+                          import: image_text
+                    team_member:
+                      display: Teammitglied
+                      instructions: 'Teammitglied hinzufügen'
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: team_member
   seo:
     display: SEO
     sections:

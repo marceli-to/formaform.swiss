@@ -6,17 +6,19 @@ fields:
       max_files: 1
       container: assets
       type: assets
-      display: 'Bild (Mobile)'
-      instructions: 'Optimales Format is 3:4'
+      display: "Bild –\_Mobile"
+      instructions: 'Optimales Format ist 3:4'
       localizable: false
       width: 50
+      instructions_position: below
   -
     handle: image_desktop
     field:
       max_files: 1
       container: assets
       type: assets
-      display: 'Bild (Desktop)'
-      instructions: 'Optimales Format is 16:9'
+      display: 'Bild – Desktop'
+      instructions: 'Optimales Format ist 16:9'
       localizable: false
       width: 50
+      instructions_position: below

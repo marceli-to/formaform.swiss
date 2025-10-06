@@ -109,25 +109,35 @@ return [
           'xl' => ['w' => 1440, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
           '2xl' => ['w' => 1680, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
 
-          // Visual desktop (16:9)
-          'visual-desktop-md-webp' => ['w' => 768, 'h' => 432, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'visual-desktop-lg-webp' => ['w' => 1280, 'h' => 720, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'visual-desktop-xl-webp' => ['w' => 1440, 'h' => 810, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'visual-desktop-2xl-webp' => ['w' => 1680, 'h' => 945, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'visual-desktop-md' => ['w' => 768, 'h' => 432, 'q' => 90, 'fit' => 'crop'],
-          'visual-desktop-lg' => ['w' => 1280, 'h' => 720, 'q' => 90, 'fit' => 'crop'],
-          'visual-desktop-xl' => ['w' => 1440, 'h' => 810, 'q' => 90, 'fit' => 'crop'],
-          'visual-desktop-2xl' => ['w' => 1680, 'h' => 945, 'q' => 90, 'fit' => 'crop'],
+          // 16:9
+          '16x9-md-webp' => ['w' => 768, 'h' => 432, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '16x9-lg-webp' => ['w' => 1280, 'h' => 720, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '16x9-xl-webp' => ['w' => 1440, 'h' => 810, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '16x9-2xl-webp' => ['w' => 1680, 'h' => 945, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '16x9-md' => ['w' => 768, 'h' => 432, 'q' => 90, 'fit' => 'crop'],
+          '16x9-lg' => ['w' => 1280, 'h' => 720, 'q' => 90, 'fit' => 'crop'],
+          '16x9-xl' => ['w' => 1440, 'h' => 810, 'q' => 90, 'fit' => 'crop'],
+          '16x9-2xl' => ['w' => 1680, 'h' => 945, 'q' => 90, 'fit' => 'crop'],
 
-          // Visual mobile (3:4)
-          'visual-mobile-md-webp' => ['w' => 768, 'h' => 1024, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'visual-mobile-lg-webp' => ['w' => 960, 'h' => 1280, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'visual-mobile-xl-webp' => ['w' => 1080, 'h' => 1440, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'visual-mobile-2xl-webp' => ['w' => 1260, 'h' => 1680, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'visual-mobile-md' => ['w' => 768, 'h' => 1024, 'q' => 90, 'fit' => 'crop'],
-          'visual-mobile-lg' => ['w' => 960, 'h' => 1280, 'q' => 90, 'fit' => 'crop'],
-          'visual-mobile-xl' => ['w' => 1080, 'h' => 1440, 'q' => 90, 'fit' => 'crop'],
-          'visual-mobile-2xl' => ['w' => 1260, 'h' => 1680, 'q' => 90, 'fit' => 'crop'],
+          // 16:10
+          '16x10-md-webp' => ['w' => 768, 'h' => 480, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '16x10-lg-webp' => ['w' => 1280, 'h' => 800, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '16x10-xl-webp' => ['w' => 1440, 'h' => 900, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '16x10-2xl-webp' => ['w' => 1680, 'h' => 1050, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '16x10-md' => ['w' => 768, 'h' => 480, 'q' => 90, 'fit' => 'crop'],
+          '16x10-lg' => ['w' => 1280, 'h' => 800, 'q' => 90, 'fit' => 'crop'],
+          '16x10-xl' => ['w' => 1440, 'h' => 900, 'q' => 90, 'fit' => 'crop'],
+          '16x10-2xl' => ['w' => 1680, 'h' => 1050, 'q' => 90, 'fit' => 'crop'],
+
+          // 3:4
+          '3x4-md-webp' => ['w' => 768, 'h' => 1024, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '3x4-lg-webp' => ['w' => 960, 'h' => 1280, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '3x4-xl-webp' => ['w' => 1080, 'h' => 1440, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '3x4-2xl-webp' => ['w' => 1260, 'h' => 1680, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          '3x4-md' => ['w' => 768, 'h' => 1024, 'q' => 90, 'fit' => 'crop'],
+          '3x4-lg' => ['w' => 960, 'h' => 1280, 'q' => 90, 'fit' => 'crop'],
+          '3x4-xl' => ['w' => 1080, 'h' => 1440, 'q' => 90, 'fit' => 'crop'],
+          '3x4-2xl' => ['w' => 1260, 'h' => 1680, 'q' => 90, 'fit' => 'crop'],
 
           'max_upload_size' => ['w' => 4000, 'h' => 4000, 'fit' => 'max'],
 
