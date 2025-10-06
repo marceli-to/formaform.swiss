@@ -32,7 +32,7 @@ ul {
 }
 
 strong {
-  @apply font-spezia-medium font-normal;
+  @apply font-spezia-medium font-medium;
 }
 
 .product p:not(:last-child) {
