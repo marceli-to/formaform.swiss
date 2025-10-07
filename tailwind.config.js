@@ -26,7 +26,7 @@ export default {
       colors: {
         'olverra': '#788773',
         'dravine': '#465441',
-        'indian': '#DB5461'
+        'indian': '#9f1414'
       },
 
       fontFamily: {

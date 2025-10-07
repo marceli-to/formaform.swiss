@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\ResetPasswordRequest;
 use App\Notifications\PasswordReset;
 use App\Notifications\UserCreated;
 use Illuminate\Http\JsonResponse;
@@ -44,7 +45,7 @@ class UserController extends Controller
     /**
      * Reset user password and send new password via email.
      */
-    public function resetPassword(Request $request): JsonResponse
+    public function password(ResetPasswordRequest $request): JsonResponse
     {
         $request->validate([
             'email' => 'required|email',
@@ -53,9 +54,9 @@ class UserController extends Controller
         $user = User::findByEmail($request->email);
 
         if (! $user) {
-            return response()->json([
-                'message' => 'Kein Benutzer mit dieser E-Mail-Adresse gefunden.',
-            ], 404);
+          return response()->json([
+              'message' => 'Ein neues Passwort wurde an die angegebene E-Mail-Adresse gesendet.',
+          ], 200);
         }
 
         // Generate a secure random password

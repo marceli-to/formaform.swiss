@@ -20,4 +20,4 @@ Route::middleware(['auth', 'superuser'])->group(function () {
 });
 
 // Password reset
-Route::post('/api/password-reset', [UserController::class, 'resetPassword'])->name('api.password.reset');
+Route::post('/api/password-reset', [UserController::class, 'password'])->name('api.password.reset');

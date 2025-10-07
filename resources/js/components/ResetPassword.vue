@@ -13,7 +13,6 @@
 						id="reset-email"
 						v-model="form.email"
 						class="bg-white w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-olverra placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0"
-            :class="{ 'placeholder:text-indian' : errors.email }"
 						placeholder="E-Mail-Adresse"
 						required />
 				</div>
@@ -26,8 +25,8 @@
 					{{ loading ? 'Wird gesendet...' : 'Neues Passwort senden' }}
 				</button>
 
-				<div v-if="errorMessage" class="font-spezia-medium font-medium text-indian">
-					{{ errorMessage }}
+				<div v-if="errors.email" class="bg-indian/70 text-white px-12 py-9">
+					{{ errors.email[0] }}
 				</div>
 			</div>
 		</template>
@@ -36,7 +35,7 @@
 			<a
 				href="javascript:;"
 				@click="backToLogin"
-				class="text-xs text-dravine hover:underline underline-offset-2">
+				class="text-xs text-dravine hover:underline underline-offset-2 pl-12">
 				Zurück zum Login
 			</a>
 		</div>

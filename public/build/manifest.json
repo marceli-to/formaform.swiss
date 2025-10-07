@@ -3,7 +3,7 @@
     "file": "assets/axios-925902ef.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app-117cf997.css",
+    "file": "assets/app-a4efe824.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -29,7 +29,7 @@
     "src": "resources/js/app.js"
   },
   "resources/js/password-reset.js": {
-    "file": "assets/password-reset-38344879.js",
+    "file": "assets/password-reset-14180423.js",
     "imports": [
       "_axios-925902ef.js"
     ],
