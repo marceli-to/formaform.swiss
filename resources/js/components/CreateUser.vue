@@ -52,21 +52,38 @@
 
 			<div class="flex flex-col gap-y-8">
 				<label for="password" class="font-spezia-medium font-medium" :class="{ 'text-indian': errors.password }">
-          <template v-if="errors.password">
-            {{ errors.password[0] }}
-          </template>
-          <template v-else>
-            Passwort
-          </template>
-		    </label>
-				<input
-					type="password"
-					id="password"
-					v-model="form.password"
-					class="bg-white border border-olverra w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-black placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0"
-					placeholder="Passwort"
-					required
-				/>
+					<template v-if="errors.password">
+						{{ errors.password[0] }}
+					</template>
+					<template v-else>
+						Passwort
+					</template>
+				</label>
+				<div class="relative">
+					<input
+						:type="showPassword ? 'text' : 'password'"
+						id="password"
+						v-model="form.password"
+						class="bg-white border border-olverra w-full px-12 py-8 pr-100 font-spezia-medium font-medium text-xs leading-none text-black placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0"
+						placeholder="Passwort"
+						required
+					/>
+					<button
+						type="button"
+						@click="showPassword = !showPassword"
+						class="absolute right-12 top-1/2 -translate-y-1/2 text-olverra hover:text-dravine transition-colors"
+						:aria-label="showPassword ? 'Passwort verbergen' : 'Passwort anzeigen'">
+						<IconEye :closed="!showPassword" class="w-20 h-20" />
+					</button>
+				</div>
+        <div class="flex justify-end">
+          <button
+            type="button"
+            @click="generatePassword"
+            class="text-olverra hover:text-dravine transition-colors">
+              Passwort generieren
+          </button>
+        </div>
       </div>
 
 			<div class="mt-8">
@@ -84,6 +101,7 @@
 <script setup>
 import { reactive, ref } from 'vue';
 import axios from 'axios';
+import IconEye from './icons/Eye.vue';
 
 const form = reactive({
 	name: 'Gabriela Morf',
@@ -95,6 +113,35 @@ const errors = ref({});
 const loading = ref(false);
 const successMessage = ref('');
 const errorMessage = ref('');
+const showPassword = ref(false);
+
+const generatePassword = () => {
+	const length = 16;
+	const uppercase = 'ABCDEFGHIJKLMNPQRSTUVWXYZ';
+	const lowercase = 'abcdefghijkmnpqrstuvwxyz';
+	const numbers = '123456789';
+	const special = '!@#$%&*';
+	const allChars = uppercase + lowercase + numbers + special;
+
+	let password = '';
+
+	// Ensure at least one of each type
+	password += uppercase[Math.floor(Math.random() * uppercase.length)];
+	password += lowercase[Math.floor(Math.random() * lowercase.length)];
+	password += numbers[Math.floor(Math.random() * numbers.length)];
+	password += special[Math.floor(Math.random() * special.length)];
+
+	// Fill the rest randomly
+	for (let i = password.length; i < length; i++) {
+		password += allChars[Math.floor(Math.random() * allChars.length)];
+	}
+
+	// Shuffle the password
+	password = password.split('').sort(() => Math.random() - 0.5).join('');
+
+	form.password = password;
+	showPassword.value = true;
+};
 
 const createUser = async () => {
 	loading.value = true;
