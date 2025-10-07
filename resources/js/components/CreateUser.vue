@@ -115,9 +115,9 @@ import axios from 'axios';
 import IconEye from './icons/Eye.vue';
 
 const form = reactive({
-	name: 'Gabriela Morf',
-	email: 'gabriela.morf@example.com',
-	password: 'TestPass123!',
+	name: null,
+	email: null,
+	password: null,
 });
 
 const errors = ref({});
@@ -166,9 +166,9 @@ const createUser = async () => {
 		successMessage.value = 'Benutzer wurde erfolgreich erstellt und eine E-Mail wurde versendet.';
 
 		// Reset form
-		form.name = 'Gabriela Morf';
-		form.email = 'gabriela.morf@example.com';
-		form.password = 'TestPass123!';
+		form.name = null;
+		form.email = null;
+		form.password = null;
 	} catch (error) {
 		if (error.response && error.response.status === 422) {
 			errors.value = error.response.data.errors || {};
