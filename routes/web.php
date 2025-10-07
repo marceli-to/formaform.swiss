@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 // Create user
 Route::middleware(['auth', 'superuser'])->group(function () {
-  Route::post('/api/user', [UserController::class, 'store'])->name('api.users.store');
+    Route::post('/api/user', [UserController::class, 'store'])->name('api.users.store');
 });
+
+// Password reset
+Route::post('/api/password-reset', [UserController::class, 'resetPassword'])->name('api.password.reset');

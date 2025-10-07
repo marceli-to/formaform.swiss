@@ -72,45 +72,65 @@
 
     {{ else }}
 
-      {{ user:login_form redirect="{{ url }}" error_redirect="{{ url }}" }}
+      <div data-auth="login-form">
+        {{ user:login_form redirect="{{ url }}" error_redirect="{{ url }}" }}
 
-        <div class="flex flex-col gap-y-14 pt-20 lg:pt-0 {{ !is_homepage ? 'mt-10' : '' }}">
+          <div class="flex flex-col gap-y-14 pt-20 lg:pt-0 {{ !is_homepage ? 'mt-10' : '' }}">
 
-          <div>
-            <input 
-              type="email" 
-              name="email" 
-              value="{{ old:email }}" 
-              class="bg-white w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-olverra placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0" 
-              placeholder="E-Mail-Adresse"
-              x-on:focus="hasFocus = true" />
+            <div>
+              <input
+                type="email"
+                name="email"
+                value="{{ old:email }}"
+                class="bg-white w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-olverra placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0"
+                placeholder="E-Mail-Adresse"
+                x-on:focus="hasFocus = true" />
+            </div>
+
+            <div>
+              <input
+                type="password"
+                name="password"
+                class="bg-white w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-olverra placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0"
+                placeholder="Passwort"
+                x-on:focus="hasFocus = true" />
+            </div>
+
+            <button
+              type="submit"
+              class="bg-dravine font-spezia-medium font-medium text-xs leading-none text-olverra block w-full text-left px-12 py-11 hover:bg-white transition-colors">
+              Einloggen
+            </button>
+
+            {{ if errors }}
+              <ul class="!mb-0 text-red-600" x-show="!hasFocus">
+                {{ errors }}
+                  <li>{{ value }}</li>
+                {{ /errors }}
+              </ul>
+            {{ /if }}
+
+            <div>
+              <a
+                href="javascript:;"
+                @click="document.querySelector('[data-auth=login-form]').style.display='none'; document.querySelector('[data-auth=password-reset-form]').style.display='block'"
+                class="text-xs text-dravine hover:underline underline-offset-2">
+                Passwort vergessen?
+              </a>
+            </div>
+
           </div>
+        {{ /user:login_form }}
+      </div>
 
-          <div>
-            <input 
-              type="password" 
-              name="password" 
-              class="bg-white w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-olverra placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0" 
-              placeholder="Passwort"
-              x-on:focus="hasFocus = true" />
+      <div data-auth="password-reset-form" style="display: none;">
+        <div class="pt-20 lg:pt-0 {{ !is_homepage ? 'mt-10' : '' }}">
+          <div id="password-reset">
+            <reset-password></reset-password>
           </div>
-
-          <button 
-            type="submit" 
-            class="bg-dravine font-spezia-medium font-medium text-xs leading-none text-olverra block w-full text-left px-12 py-11 hover:bg-white transition-colors">
-            Einloggen
-          </button>
-
-          {{ if errors }}
-            <ul class="!mb-0 text-red-600" x-show="!hasFocus">
-              {{ errors }}
-                <li>{{ value }}</li>
-              {{ /errors }}
-            </ul>
-          {{ /if }}
-
         </div>
-      {{ /user:login_form }}
+      </div>
+      {{ vite src="resources/js/password-reset.js" }}
     {{ /if }}
   </div>
 </div>

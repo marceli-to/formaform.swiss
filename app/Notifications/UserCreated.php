@@ -35,7 +35,7 @@ class UserCreated extends Notification
 	public function toMail(object $notifiable): MailMessage
 	{
 		return (new MailMessage)
-			->subject('Zugang Formaform AG')
+			->subject('Formaform – Zugang')
 			->markdown('notifications.create-user', [
 				'name' => $notifiable->get('name'),
 				'email' => $notifiable->email(),
