@@ -14,8 +14,13 @@
 
 		<form @submit.prevent="createUser" class="flex flex-col gap-y-20 text-xs">
 			<div class="flex flex-col gap-y-8">
-				<label for="name" class="font-spezia-medium font-medium">
-					Name
+				<label for="name" class="font-spezia-medium font-medium" :class="{ 'text-indian': errors.name }">
+					<template v-if="errors.name">
+            {{ errors.name[0] }}
+          </template>
+          <template v-else>
+            Name
+          </template>
 				</label>
 				<input
 					type="text"
@@ -23,13 +28,18 @@
 					v-model="form.name"
 					class="bg-white border border-olverra w-full px-12 py-8 font-spezia-medium font-medium text-xs leading-none text-black placeholder:text-xs placeholder:text-olverra !outline-none ring-0 focus:ring-0 focus-visible:ring-0"
 					placeholder="Vollständiger Name"
-					required
-				/>
-				<span v-if="errors.name" class="text-indian text-xs mt-4 block">{{ errors.name[0] }}</span>
+					required />
 			</div>
 
 			<div class="flex flex-col gap-y-8">
-				<label for="email" class="font-spezia-medium font-medium">E-Mail</label>
+				<label for="email" class="font-spezia-medium font-medium" :class="{ 'text-indian': errors.email }">
+          <template v-if="errors.email">
+            {{ errors.email[0] }}
+          </template>
+          <template v-else>
+            E-Mail
+          </template>
+		    </label>
 				<input
 					type="email"
 					id="email"
@@ -38,11 +48,17 @@
 					placeholder="E-Mail-Adresse"
 					required
 				/>
-				<span v-if="errors.email" class="text-indian text-xs mt-4 block">{{ errors.email[0] }}</span>
 			</div>
 
 			<div class="flex flex-col gap-y-8">
-				<label for="password" class="font-spezia-medium font-medium">Passwort</label>
+				<label for="password" class="font-spezia-medium font-medium" :class="{ 'text-indian': errors.password }">
+          <template v-if="errors.password">
+            {{ errors.password[0] }}
+          </template>
+          <template v-else>
+            Passwort
+          </template>
+		    </label>
 				<input
 					type="password"
 					id="password"
@@ -51,8 +67,7 @@
 					placeholder="Passwort"
 					required
 				/>
-				<span v-if="errors.password" class="text-indian text-xs mt-4 block">{{ errors.password[0] }}</span>
-			</div>
+      </div>
 
 			<div class="mt-8">
 				<button

@@ -10,42 +10,32 @@ use Statamic\Facades\User;
 
 class UserController extends Controller
 {
-	/**
-	 * Store a newly created user.
-	 */
-	public function store(CreateUserRequest $request): JsonResponse
-	{
-		// Check if user with this email already exists
-		if (User::findByEmail($request->email)) {
-			return response()->json([
-				'message' => 'Validation failed',
-				'errors' => [
-					'email' => ['E-Mail-Adresse wird bereits verwendet'],
-				],
-			], 422);
-		}
+    /**
+     * Store a newly created user.
+     */
+    public function store(CreateUserRequest $request): JsonResponse
+    {
+        $user = User::make()
+            ->email($request->email)
+            ->password(Hash::make($request->password))
+            ->set('name', $request->name);
 
-		$user = User::make()
-			->email($request->email)
-			->password(Hash::make($request->password))
-			->set('name', $request->name);
+        // Assign frontend_user role and group
+        $user->assignRole('frontend_user');
+        $user->addToGroup('frontend_user');
 
-		// Assign frontend_user role and group
-		$user->assignRole('frontend_user');
-		$user->addToGroup('frontend_user');
+        $user->save();
 
-		$user->save();
+        // Send notification email
+        $user->notify(new NewUserCreated($request->password));
 
-		// Send notification email
-		$user->notify(new NewUserCreated($request->password));
-
-		return response()->json([
-			'message' => 'Benutzer wurde erfolgreich erstellt.',
-			'user' => [
-				'id' => $user->id(),
-				'name' => $user->get('name'),
-				'email' => $user->email(),
-			],
-		], 201);
-	}
+        return response()->json([
+            'message' => 'Benutzer wurde erfolgreich erstellt.',
+            'user' => [
+                'id' => $user->id(),
+                'name' => $user->get('name'),
+                'email' => $user->email(),
+            ],
+        ], 201);
+    }
 }
