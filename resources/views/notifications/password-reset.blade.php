@@ -18,10 +18,6 @@
 	</div>
 	<br>
 	<div class="text-base">
-		Bitte ändern Sie Ihr Passwort nach dem Login zu einem persönlichen Passwort.
-	</div>
-	<br>
-	<div class="text-base">
 		Bei Fragen stehen wir Ihnen gerne zur Verfügung.
 	</div>
 	<br>
