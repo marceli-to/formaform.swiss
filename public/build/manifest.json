@@ -1,4 +1,7 @@
 {
+  "_axios-925902ef.js": {
+    "file": "assets/axios-925902ef.js"
+  },
   "resources/css/app.css": {
     "file": "assets/app-5e9626a0.css",
     "isEntry": true,
@@ -25,8 +28,19 @@
     "isEntry": true,
     "src": "resources/js/app.js"
   },
+  "resources/js/password-reset.js": {
+    "file": "assets/password-reset-38344879.js",
+    "imports": [
+      "_axios-925902ef.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/password-reset.js"
+  },
   "resources/js/user.js": {
-    "file": "assets/user-661e2ab7.js",
+    "file": "assets/user-9f4ceceb.js",
+    "imports": [
+      "_axios-925902ef.js"
+    ],
     "isEntry": true,
     "src": "resources/js/user.js"
   }
