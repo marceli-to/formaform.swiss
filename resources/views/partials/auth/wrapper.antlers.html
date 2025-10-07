@@ -103,7 +103,7 @@
             </button>
 
             {{ if errors }}
-              <ul class="!mb-0 text-indian" x-show="!hasFocus">
+              <ul class="!mb-0 text-indian" x-show="!hasFocus && showErrors" data-auth="login-errors">
                 {{ errors }}
                   <li>{{ value }}</li>
                 {{ /errors }}
@@ -113,7 +113,7 @@
             <div>
               <a
                 href="javascript:;"
-                @click="document.querySelector('[data-auth=login-form]').style.display='none'; document.querySelector('[data-auth=password-reset-form]').style.display='block'"
+                @click="document.querySelector('[data-auth=login-form]').style.display='none'; document.querySelector('[data-auth=password-reset-form]').style.display='block'; const errors = document.querySelector('[data-auth=login-errors]'); if(errors) errors.style.display='none'"
                 class="text-xs text-dravine hover:underline underline-offset-2">
                 Passwort vergessen?
               </a>
