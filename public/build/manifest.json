@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-7acff36b.css",
+    "file": "assets/app-f1d4b7ce.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -25,9 +25,9 @@
     "isEntry": true,
     "src": "resources/js/app.js"
   },
-  "resources/js/user-management.js": {
-    "file": "assets/user-management-75a032c6.js",
+  "resources/js/user.js": {
+    "file": "assets/user-178d9246.js",
     "isEntry": true,
-    "src": "resources/js/user-management.js"
+    "src": "resources/js/user.js"
   }
 }
