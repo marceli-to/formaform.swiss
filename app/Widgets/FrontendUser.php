@@ -2,7 +2,7 @@
 namespace App\Widgets;
 use Statamic\Widgets\Widget;
 
-class LocalWeather extends Widget
+class FrontendUser extends Widget
 {
   /**
    * The HTML that should be shown in the widget.
@@ -11,6 +11,6 @@ class LocalWeather extends Widget
    */
   public function html()
   {
-    return view('widgets.local_weather');
+    return view('widgets.frontend_user');
   }
 }

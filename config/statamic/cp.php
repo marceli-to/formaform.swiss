@@ -38,16 +38,8 @@ return [
     */
 
     'widgets' => [
-        // [ 
-        //   'type' => 'collection',
-        //   'collection' => 'publications',
-        //   'limit' => 5,
-        //   'title' => 'Publikationen',
-        //   'width' => 100,
-        //   'sort' => 'order',
-        // ],
         [ 
-          'type' => 'local_weather',
+          'type' => 'frontend_user',
           'width' => 100,
           'title' => 'Wetter',
         ],

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,3 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Create user
+Route::middleware(['auth', 'superuser'])->group(function () {
+  Route::post('/api/user', [UserController::class, 'store'])->name('api.users.store');
+});
