@@ -37,7 +37,7 @@ class CreateUserRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'Name ist erforderlich',
+            'name.required' => 'Vollständiger Name ist erforderlich',
             'email.required' => 'E-Mail-Adresse ist erforderlich',
             'email.email' => 'E-Mail-Adresse ist ungültig',
             'password.required' => 'Passwort ist erforderlich',

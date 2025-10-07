@@ -1,5 +1,6 @@
 <template>
 	<section class="max-w-[32rem] mx-auto text-xs">
+    
 		<h1 class="font-spezia-medium font-medium text-sm mb-20 lg:mb-40">
 			Benutzer erstellen
 		</h1>
@@ -14,12 +15,15 @@
 
 		<form @submit.prevent="createUser" class="flex flex-col gap-y-20 text-xs">
 			<div class="flex flex-col gap-y-8">
-				<label for="name" class="font-spezia-medium font-medium" :class="{ 'text-indian': errors.name }">
+				<label 
+          for="name" 
+          class="font-spezia-medium font-medium" 
+          :class="{ 'text-indian': errors.name }">
 					<template v-if="errors.name">
             {{ errors.name[0] }}
           </template>
           <template v-else>
-            Name
+            Vollständiger Name
           </template>
 				</label>
 				<input
@@ -32,7 +36,10 @@
 			</div>
 
 			<div class="flex flex-col gap-y-8">
-				<label for="email" class="font-spezia-medium font-medium" :class="{ 'text-indian': errors.email }">
+				<label 
+          for="email" 
+          class="font-spezia-medium font-medium" 
+          :class="{ 'text-indian': errors.email }">
           <template v-if="errors.email">
             {{ errors.email[0] }}
           </template>
@@ -51,7 +58,10 @@
 			</div>
 
 			<div class="flex flex-col gap-y-8">
-				<label for="password" class="font-spezia-medium font-medium" :class="{ 'text-indian': errors.password }">
+				<label 
+          for="password" 
+          class="font-spezia-medium font-medium" 
+          :class="{ 'text-indian': errors.password }">
 					<template v-if="errors.password">
 						{{ errors.password[0] }}
 					</template>
@@ -94,6 +104,7 @@
 					{{ loading ? 'Wird erstellt...' : 'Erstellen' }}
 				</button>
 			</div>
+
 		</form>
 	</section>
 </template>

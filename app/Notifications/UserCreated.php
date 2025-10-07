@@ -35,16 +35,13 @@ class UserCreated extends Notification
 	public function toMail(object $notifiable): MailMessage
 	{
 		return (new MailMessage)
-			->subject('Ihr neuer Zugang zu Formaform AG')
-			->greeting('Hallo ' . $notifiable->get('name') . ',')
-			->line('Ein Zugang wurde für Sie bei Formaform AG erstellt.')
-			->line('Hier sind Ihre Login-Daten:')
-			->line('**E-Mail:** ' . $notifiable->email())
-			->line('**Passwort:** ' . $this->password)
-			->action('Jetzt einloggen', url('/'))
-			->line('Bitte ändern Sie Ihr Passwort nach dem ersten Login.')
-			->line('Bei Fragen stehen wir Ihnen gerne zur Verfügung.')
-			->salutation('Mit freundlichen Grüssen, das Formaform AG Team');
+			->subject('Zugang Formaform AG')
+			->markdown('notifications.create-user', [
+				'name' => $notifiable->get('name'),
+				'email' => $notifiable->email(),
+				'password' => $this->password,
+				'loginUrl' => url('/'),
+			]);
 	}
 
 	/**
