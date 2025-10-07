@@ -12,18 +12,18 @@
 
         {{ if !private || logged_in }}
 
-          <div class="product md:flex md:gap-x-20 pb-20 md:pb-40 mb-20 md:mb-40 border-b border-b-black last:mb-0">
+          <div class="product md:grid md:grid-cols-12 md:gap-x-20 pb-20 md:pb-40 mb-20 md:mb-40 border-b border-b-black last:mb-0">
 
             {{ if image }}
               {{ partial:components/media/image 
                 :image="image" 
                 :sizes="['2xl', 'xl', 'lg']"
-                wrapperClass="mb-20 md:mb-0" 
+                wrapperClass="md:col-span-6 mb-20 md:mb-0" 
                 class="w-full h-auto" }}
             {{ /if }}
 
             {{ if description }}
-              <div>
+              <div class="md:col-span-6">
                 {{ description }}
               </div>
             {{ /if }}
