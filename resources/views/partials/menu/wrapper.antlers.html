@@ -5,7 +5,7 @@
     top-[var(--header-height-sm)]
     lg:top-[calc(var(--header-height-lg)_+_12px)]
     left-0
-    xl:left-[calc(((100%_-_var(--max-width-container))_/_2))]
+    2xl:left-[calc(((100%_-_var(--max-width-container))_/_2))]
     z-20
     px-20
     lg:px-22
@@ -29,7 +29,7 @@
       {{ nav:main }}
         {{ partial:menu/item }}
       {{ /nav:main }}
-      <li>
+      <li class="lg:hidden">
         <a
           href="javascript:;"
           x-on:click="auth = !auth" 

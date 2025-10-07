@@ -2,7 +2,7 @@
   href="{{ url }}"
   title="{{ title }}"
   aria-label="{{ title }}"
-  class="hover:text-olverra transition-colors {{ class }}">
+  class="hover:text-olverra transition-colors group {{ class }}">
 
   {{ partial:components/headings/h3 class="mb-12" }}
     {{ title }}
@@ -11,6 +11,6 @@
   {{ partial:components/media/image 
     :image="preview_image" 
     :sizes="['lg', 'md']" 
-    class="w-full h-full object-cover aspect-square" }}
+    class="w-full h-full object-cover aspect-square group-hover:opacity-80 transition-opacity" }}
 
 </a>
