@@ -29,6 +29,14 @@
       {{ nav:main }}
         {{ partial:menu/item }}
       {{ /nav:main }}
+      <li>
+        <a
+          href="javascript:;"
+          x-on:click="auth = !auth" 
+          class="font-spezia-medium font-medium leading-none lg:text-md hover:text-olverra transition-colors">
+          Login
+        </a>
+      </li>
     </ul>
   </nav>
 </div>
