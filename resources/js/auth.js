@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import ResetPassword from './components/ResetPassword.vue';
+import AuthWrapper from './components/auth/AuthWrapper.vue';
 import axios from 'axios';
 
 // Configure axios
@@ -14,14 +14,17 @@ if (token) {
 
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', () => {
-	const resetAppElement = document.querySelector('#password-reset');
-	if (resetAppElement) {
-		const app = createApp({
-			components: {
-				ResetPassword,
-			},
+	const authAppElement = document.querySelector('#auth-app');
+	if (authAppElement) {
+		// Get initial state from data attributes
+		const initialLoggedIn = authAppElement.dataset.loggedIn === 'true';
+		const initialUserEmail = authAppElement.dataset.userEmail || '';
+
+		const app = createApp(AuthWrapper, {
+			initialLoggedIn,
+			initialUserEmail,
 		});
 
-		app.mount('#password-reset');
+		app.mount('#auth-app');
 	}
 });

@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Authentication
+Route::post('/api/login', [UserController::class, 'login'])->name('api.login');
+Route::post('/api/logout', [UserController::class, 'logout'])->name('api.logout');
+
 // Create user
 Route::middleware(['auth', 'superuser'])->group(function () {
     Route::post('/api/user', [UserController::class, 'store'])->name('api.users.store');

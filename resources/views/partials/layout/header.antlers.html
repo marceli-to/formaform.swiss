@@ -18,7 +18,7 @@
       <div class="hidden lg:flex lg:w-60 justify-end">
         <a
           href="javascript:;"
-          x-on:click="auth = !auth"
+          x-on:click="window.dispatchEvent(new CustomEvent('toggle-auth'))"
           class="block w-14 h-auto">
           {{ partial:icons/login class="w-full h-auto" }}
         </a>

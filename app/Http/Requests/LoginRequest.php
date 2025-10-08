@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ResetPasswordRequest extends FormRequest
+class LoginRequest extends FormRequest
 {
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -23,6 +23,7 @@ class ResetPasswordRequest extends FormRequest
 	{
 		return [
 			'email' => ['required', 'string', 'email'],
+			'password' => ['required', 'string'],
 		];
 	}
 
@@ -36,6 +37,7 @@ class ResetPasswordRequest extends FormRequest
 		return [
 			'email.required' => 'E-Mail-Adresse ist erforderlich',
 			'email.email' => 'E-Mail-Adresse ist ungültig',
+			'password.required' => 'Passwort ist erforderlich',
 		];
 	}
 }

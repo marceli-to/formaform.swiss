@@ -32,7 +32,7 @@
       <li class="lg:hidden">
         <a
           href="javascript:;"
-          x-on:click="auth = !auth" 
+          x-on:click="window.dispatchEvent(new CustomEvent('toggle-auth'))"
           class="font-spezia-medium font-medium leading-none lg:text-md hover:text-olverra transition-colors">
           Login
         </a>

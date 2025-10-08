@@ -47,6 +47,8 @@
 import { reactive, ref } from 'vue';
 import axios from 'axios';
 
+const emit = defineEmits(['back-to-login']);
+
 const form = reactive({
 	email: null,
 });
@@ -81,18 +83,13 @@ const resetPassword = async () => {
 };
 
 const backToLogin = () => {
-	document.querySelector('[data-auth="login-form"]').style.display = 'block';
-	document.querySelector('[data-auth="password-reset-form"]').style.display = 'none';
-
-	// Hide login errors
-	const loginErrors = document.querySelector('[data-auth="login-errors"]');
-	if (loginErrors) {
-		loginErrors.style.display = 'none';
-	}
-
+	// Reset form state
 	successMessage.value = '';
 	errorMessage.value = '';
 	errors.value = {};
 	form.email = null;
+
+	// Emit event to switch view
+	emit('back-to-login');
 };
 </script>
