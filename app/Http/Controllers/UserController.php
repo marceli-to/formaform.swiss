@@ -32,6 +32,7 @@ class UserController extends Controller
 		}
 
 		Auth::login($user);
+		$request->session()->regenerate();
 
 		return response()->json([
 			'message' => 'Erfolgreich angemeldet.',
@@ -142,7 +143,13 @@ class UserController extends Controller
 			$password .= $allChars[random_int(0, strlen($allChars) - 1)];
 		}
 
-		// Shuffle the password
-		return str_shuffle($password);
+		// Shuffle the password using a cryptographically secure algorithm
+		$characters = str_split($password);
+		for ($i = count($characters) - 1; $i > 0; $i--) {
+			$j = random_int(0, $i);
+			[$characters[$i], $characters[$j]] = [$characters[$j], $characters[$i]];
+		}
+
+		return implode('', $characters);
 	}
 }

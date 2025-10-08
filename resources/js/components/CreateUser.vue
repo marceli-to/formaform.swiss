@@ -161,7 +161,7 @@ const createUser = async () => {
 	errorMessage.value = '';
 
 	try {
-		const response = await axios.post('/api/user', form);
+		await axios.post('/api/user', form);
 
 		successMessage.value = 'Benutzer wurde erfolgreich erstellt und eine E-Mail wurde versendet.';
 
@@ -169,6 +169,7 @@ const createUser = async () => {
 		form.name = null;
 		form.email = null;
 		form.password = null;
+		showPassword.value = false;
 	} catch (error) {
 		if (error.response && error.response.status === 422) {
 			errors.value = error.response.data.errors || {};

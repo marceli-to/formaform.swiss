@@ -37,7 +37,7 @@
     "src": "resources/js/auth.js"
   },
   "resources/js/user.js": {
-    "file": "assets/user-d47d92a8.js",
+    "file": "assets/user-073254b1.js",
     "imports": [
       "_axios-600a6aab.js"
     ],
