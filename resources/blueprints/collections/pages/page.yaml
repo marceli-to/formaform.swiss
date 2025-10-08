@@ -47,6 +47,13 @@ tabs:
                       fields:
                         -
                           import: downloads
+                    image_text_hero:
+                      display: 'Bild / Text (Intro)'
+                      instructions: 'Bild / Text Element hinzufügen'
+                      icon: text-formatting-image-left
+                      fields:
+                        -
+                          import: image_text_hero
                     image_text:
                       display: 'Bild / Text'
                       instructions: 'Bild / Text Element hinzufügen'

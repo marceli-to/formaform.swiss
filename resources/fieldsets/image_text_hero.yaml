@@ -1,4 +1,4 @@
-title: 'Bild / Text'
+title: 'Bild / Text (Intro)'
 fields:
   -
     handle: layout
@@ -15,13 +15,25 @@ fields:
       display: Darstellung
       localizable: false
   -
-    handle: image
+    handle: image_mobile
     field:
       max_files: 1
       container: assets
       type: assets
-      display: Bild
+      display: "Bild –\_Mobile"
       localizable: false
+      width: 50
+      instructions: 'Optimales Format ist 3:4'
+      instructions_position: below
+  -
+    handle: image_desktop
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: "Bild –\_Desktop"
+      localizable: false
+      width: 50
       instructions: 'Optimales Format ist 16:10'
       instructions_position: below
   -

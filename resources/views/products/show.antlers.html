@@ -12,7 +12,9 @@
 
         {{ if !private || logged_in }}
 
-          <div class="product md:grid md:grid-cols-12 md:gap-x-20 pb-20 md:pb-40 mb-20 md:mb-40 border-b border-b-black last:mb-0">
+          <div 
+            class="md:grid md:grid-cols-12 md:gap-x-20 pb-20 md:pb-40 mb-20 md:mb-40 border-b border-b-black last:mb-0"
+            data-product>
 
             {{ if image }}
               {{ partial:components/media/image 

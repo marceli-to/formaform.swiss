@@ -20,8 +20,9 @@
 				<button
 					type="button"
 					@click="resetPassword"
-					:disabled="loading"
-					class="bg-dravine font-spezia-medium font-medium text-xs leading-none text-olverra block w-full text-left px-12 py-11 hover:bg-white transition-colors disabled:opacity-50">
+					:disabled="loading || !isFormValid"
+					class="bg-dravine font-spezia-medium font-medium text-xs leading-none text-olverra block w-full text-left px-12 py-11 transition-colors disabled:opacity-50"
+					:class="{ 'hover:bg-white': !loading && isFormValid }">
 					{{ loading ? 'Wird gesendet...' : 'Neues Passwort senden' }}
 				</button>
 
@@ -44,7 +45,7 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue';
+import { reactive, ref, computed } from 'vue';
 import axios from 'axios';
 
 const emit = defineEmits(['back-to-login']);
@@ -57,6 +58,10 @@ const errors = ref({});
 const loading = ref(false);
 const successMessage = ref('');
 const errorMessage = ref('');
+
+const isFormValid = computed(() => {
+	return form.email && form.email.trim() !== '';
+});
 
 const resetPassword = async () => {
 	loading.value = true;

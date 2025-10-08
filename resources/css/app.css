@@ -36,26 +36,27 @@ strong {
   @apply font-spezia-medium font-medium;
 }
 
-.product p:not(:last-child) {
+/* Product pages */
+[data-product] p:not(:last-child) {
   @apply mb-15
 }
 
-.product p:has(+ ul) {
+[data-product] p:has(+ ul) {
   @apply !mb-0
 }
 
-.product ul {
+[data-product] ul {
   @apply list-none
 }
 
-.product ul li {
+[data-product] ul li {
   @apply pl-30 relative
 }
 
-.product ul li::before {
+[data-product] ul li::before {
   @apply content-['—'] absolute left-0 top-0
 }
 
-.product ul li p {
+[data-product] ul li p {
   @apply inline;
 }

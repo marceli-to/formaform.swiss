@@ -8,6 +8,7 @@ fields:
       type: assets
       display: Portrait
       localizable: false
+      instructions: 'Optimales Format ist 16:10'
   -
     handle: name
     field:

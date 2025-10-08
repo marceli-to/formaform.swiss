@@ -1,9 +1,9 @@
 {
-  "_axios-a5d8a57d.js": {
-    "file": "assets/axios-a5d8a57d.js"
+  "_axios-600a6aab.js": {
+    "file": "assets/axios-600a6aab.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app-736ea023.css",
+    "file": "assets/app-e672c3af.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -29,17 +29,17 @@
     "src": "resources/js/app.js"
   },
   "resources/js/auth.js": {
-    "file": "assets/auth-846a32c2.js",
+    "file": "assets/auth-72078582.js",
     "imports": [
-      "_axios-a5d8a57d.js"
+      "_axios-600a6aab.js"
     ],
     "isEntry": true,
     "src": "resources/js/auth.js"
   },
   "resources/js/user.js": {
-    "file": "assets/user-5d9a66d0.js",
+    "file": "assets/user-d47d92a8.js",
     "imports": [
-      "_axios-a5d8a57d.js"
+      "_axios-600a6aab.js"
     ],
     "isEntry": true,
     "src": "resources/js/user.js"
