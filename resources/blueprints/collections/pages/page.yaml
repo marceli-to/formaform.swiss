@@ -61,6 +61,13 @@ tabs:
                       fields:
                         -
                           import: image_text
+                    image_gallery:
+                      display: Bilder
+                      instructions: 'Bilder hinzufügen'
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          import: image_gallery
                     team_member:
                       display: Teammitglied
                       instructions: 'Teammitglied hinzufügen'

@@ -1,0 +1,7 @@
+<section class="flex flex-col md:grid md:grid-cols-12 gap-20 my-20">
+  {{ images }}
+    <div class="md:col-span-full lg:col-span-6">
+      {{ partial:components/media/image :image="image" preset="16x10" :sizes="['2xl', 'xl', 'lg']" eager="true" class="w-full h-auto aspect-[16/10]" }}
+    </div>
+  {{ /images }}
+</section>

@@ -23,6 +23,10 @@
   {{ partial:components/image_text }}
 {{ /if }}
 
+{{ if type == 'image_gallery' }}
+  {{ partial:components/image_gallery }}
+{{ /if }}
+
 {{ if type == 'team_member' }}
   {{ partial:components/team_member }}
 {{ /if }}
