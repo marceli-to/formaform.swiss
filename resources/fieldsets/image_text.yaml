@@ -1,20 +1,6 @@
 title: 'Bild / Text'
 fields:
   -
-    handle: layout
-    field:
-      options:
-        -
-          key: image_text
-          value: 'Bild / Text'
-        -
-          key: text_image
-          value: 'Text / Bild'
-      default: image_text
-      type: select
-      display: Darstellung
-      localizable: false
-  -
     handle: image
     field:
       max_files: 1
@@ -48,4 +34,18 @@ fields:
       container: assets
       type: bard
       display: Text
+      localizable: false
+  -
+    handle: layout
+    field:
+      options:
+        -
+          key: image_text
+          value: 'Bild / Text'
+        -
+          key: text_image
+          value: 'Text / Bild'
+      default: image_text
+      type: select
+      display: Darstellung
       localizable: false

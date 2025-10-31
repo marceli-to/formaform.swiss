@@ -1,24 +1,12 @@
 title: Visual
 fields:
   -
-    handle: image_mobile
+    handle: image
     field:
       max_files: 1
       container: assets
       type: assets
-      display: "Bild –\_Mobile"
-      instructions: 'Optimales Format ist 3:4'
+      display: Bild
+      instructions: 'Optimales Format ist 16:10'
       localizable: false
-      width: 50
-      instructions_position: below
-  -
-    handle: image_desktop
-    field:
-      max_files: 1
-      container: assets
-      type: assets
-      display: 'Bild – Desktop'
-      instructions: 'Optimales Format ist 16:9'
-      localizable: false
-      width: 50
       instructions_position: below

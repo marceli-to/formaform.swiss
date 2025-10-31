@@ -1,39 +1,13 @@
 title: 'Bild / Text (Intro)'
 fields:
   -
-    handle: layout
-    field:
-      options:
-        -
-          key: image_text
-          value: 'Bild / Text'
-        -
-          key: text_image
-          value: 'Text / Bild'
-      default: image_text
-      type: select
-      display: Darstellung
-      localizable: false
-  -
-    handle: image_mobile
+    handle: image
     field:
       max_files: 1
       container: assets
       type: assets
-      display: "Bild –\_Mobile"
+      display: Bild
       localizable: false
-      width: 50
-      instructions: 'Optimales Format ist 3:4'
-      instructions_position: below
-  -
-    handle: image_desktop
-    field:
-      max_files: 1
-      container: assets
-      type: assets
-      display: "Bild –\_Desktop"
-      localizable: false
-      width: 50
       instructions: 'Optimales Format ist 16:10'
       instructions_position: below
   -
@@ -60,4 +34,18 @@ fields:
       container: assets
       type: bard
       display: Text
+      localizable: false
+  -
+    handle: layout
+    field:
+      options:
+        -
+          key: image_text
+          value: 'Bild / Text'
+        -
+          key: text_image
+          value: 'Text / Bild'
+      default: image_text
+      type: select
+      display: Darstellung
       localizable: false
