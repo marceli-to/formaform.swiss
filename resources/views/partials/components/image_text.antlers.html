@@ -1,5 +1,6 @@
-<section class="flex flex-col md:grid md:grid-cols-12 gap-20 my-20">
-  <article class="pb-20 lg:aspect-[16/10] md:col-span-full lg:col-span-6 {{ layout == 'image_text' ? 'order-1' : 'order-2' }}">
+<section class="flex flex-col lg:col-span-10 lg:col-start-2 md:grid md:grid-cols-12 gap-20 my-20">
+
+  <article class="pb-20 lg:aspect-[3/4] md:col-span-full lg:col-span-6 {{ layout == 'image_text' ? 'order-1' : 'order-2' }}">
     
     {{ if title }}
       {{ partial:components/headings/h2 class="font-spezia-medium font-medium lg:text-md mb-22 lg:mb-28" }}
@@ -15,7 +16,7 @@
 
   <div class="md:col-span-full lg:col-span-6 {{ layout == 'image_text' ? 'order-2' : 'order-1' }}">
     
-    {{ partial:components/media/image :image="image" preset="16x10" :sizes="['2xl', 'xl', 'lg']" eager="true" class="w-full h-auto aspect-[16/10]" }}
+    {{ partial:components/media/image :image="image" preset="3x4" :sizes="['2xl', 'xl', 'lg']" eager="true" class="w-full h-auto aspect-square lg:aspect-[3/4]" }}
 
   </div>
 

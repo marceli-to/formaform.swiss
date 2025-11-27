@@ -20,7 +20,7 @@ export default {
 
       screens: {
         'xl': '1320px', // 1236px
-        '2xl': '1692px', // 1680px
+        '2xl': '1452px', // was: 1692px
       },
       
       colors: {

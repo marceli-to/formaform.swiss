@@ -1,12 +1,12 @@
 <header class="sticky top-0 left-0 z-10 w-full pt-12">
-  <div class="bg-white h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)]">
-    {{ partial:layout/container/inner class="h-[inherit] flex flex-row-reverse lg:flex-row items-center justify-between" }}
+  <div class="bg-white h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)] ">
+    {{ partial:layout/container/inner class="h-[inherit] flex flex-row-reverse lg:flex-row items-center justify-between lg:grid lg:grid-cols-12 lg:gap-x-20" }}
 
-      <div class="lg:w-60 flex justify-end lg:justify-start">
+      <div class="lg:col-span-1 flex justify-end lg:justify-start">
         {{ partial:menu/button }}
       </div>
 
-      <div>
+      <div class="lg:col-span-10">
         <a
           href="/"
           aria-label="Startseite"
@@ -15,7 +15,7 @@
         </a>
       </div>
 
-      <div class="hidden lg:flex lg:w-60 justify-end">
+      <div class="hidden lg:col-span-1 lg:flex justify-end">
         <a
           href="javascript:;"
           x-on:click="window.dispatchEvent(new CustomEvent('toggle-auth'))"

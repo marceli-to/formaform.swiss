@@ -1,6 +1,5 @@
 
-<div class="relative">
-  <section class="max-w-[var(--max-width-content)] mx-auto">
+  <section class="relative lg:col-span-10 lg:col-start-2">
 
     {{ partial:components/headings/h1 class="font-spezia-medium font-medium text-center xl:text-left mb-12 border-t border-t-black pt-12" }}
       {{ title }}
@@ -37,8 +36,9 @@
       {{ /if }}
 
     {{ /blocks }}
+
+      {{ partial:products/browse }}
+
   </section>
 
-  {{ partial:products/browse }}
 
-</div>

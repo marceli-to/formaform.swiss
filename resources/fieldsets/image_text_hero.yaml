@@ -8,7 +8,7 @@ fields:
       type: assets
       display: Bild
       localizable: false
-      instructions: 'Optimales Format ist 16:10'
+      instructions: 'Optimales Format ist 3:4'
       instructions_position: below
   -
     handle: title
