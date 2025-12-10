@@ -12,11 +12,16 @@
     {{ if name }}
       {{ partial:components/headings/h3 class="font-spezia-medium font-medium" }}
         {{ name }}
+        {{ if title }}
+          <div>{{ title }}</div>
+        {{ /if }}
       {{ /partial:components/headings/h3 }}
+
     {{ /if }}
 
     {{ if email || phone }}
       <div>
+
         {{ if email }}
           <a 
             href="mailto:{{ email }}"
