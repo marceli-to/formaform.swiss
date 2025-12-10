@@ -25,6 +25,6 @@
     Freundliche Grüsse<br><br>
     Formaform AG<br>
     +41 55 440 12 65<br>
-    kontakt@formaform.ch
+    info@formaform.swiss
   </div>
 </x-mail::message>
