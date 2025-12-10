@@ -16,6 +16,12 @@ fields:
       display: Name
       localizable: false
   -
+    handle: position
+    field:
+      type: text
+      display: Position
+      localizable: false
+  -
     handle: email
     field:
       type: text
