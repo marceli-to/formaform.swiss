@@ -27,6 +27,8 @@ fields:
         - removeformat
         - anchor
         - nobr
+        - large_text
+        - lead
       toolbar_mode: floating
       remove_empty_nodes: true
       link_collections:

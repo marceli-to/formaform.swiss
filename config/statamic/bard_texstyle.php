@@ -23,13 +23,13 @@ return [
           'cp_badge' => false,
         ],
 
-        'lead' => [
+        'large_text' => [
           'type' => 'paragraph',
-          'name' => 'Lead',
+          'name' => 'Large Text',
           'ident' => 'L',
           'icon' => null,
-          'class' => 'font-feixen-sans-medium text-lg lg:text-2xl',
-          'cp_css' => 'font-size: 1.4rem; line-height: 2rem',
+          'class' => 'lg:text-md',
+          'cp_css' => 'font-size: 1.2rem; line-height: 1.6rem',
           'cp_badge' => false,
       ],
       

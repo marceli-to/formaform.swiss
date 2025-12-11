@@ -23,11 +23,24 @@ ul:not(:last-child) {
   @apply mb-22 lg:mb-28
 }
 
-p:has(+ ul) {
+/* p:has(+ ul) {
   @apply !mb-0
+} */
+
+article ul {
+  @apply list-none
 }
 
-ul {
+article ul li {
+  @apply pl-30 relative
+}
+
+article ul li::before {
+  @apply content-['—'] absolute left-0 top-0
+}
+
+article ul li p {
+  @apply inline;
 }
 
 strong {
