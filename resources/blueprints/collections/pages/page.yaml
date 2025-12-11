@@ -80,6 +80,13 @@ tabs:
                       instructions: 'Produkteübersicht hinzufügen'
                       icon: layout-grid-dots
                       fields: {  }
+                    text_two_cols:
+                      display: 'Text (2 Spalten)'
+                      instructions: 'Textelement mit 2 Spalten hinzufügen'
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: text_two_cols
   seo:
     display: SEO
     sections:

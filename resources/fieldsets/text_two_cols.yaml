@@ -1,0 +1,40 @@
+title: 'Text (2 Spalten)'
+fields:
+  -
+    handle: text_left
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - removeformat
+        - anchor
+        - nobr
+        - large_text
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: 'Text (links)'
+      localizable: false
+      width: 50
+  -
+    handle: text_right
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - removeformat
+        - anchor
+        - nobr
+        - large_text
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: 'Text (rechts)'
+      localizable: false
+      width: 50
